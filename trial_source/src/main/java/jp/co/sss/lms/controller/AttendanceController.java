@@ -1,6 +1,8 @@
 package jp.co.sss.lms.controller;
 
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,6 +52,9 @@ public class AttendanceController {
 		return "attendance/detail";
 	}
 
+	
+	
+	
 	/**
 	 * 勤怠管理画面 『出勤』ボタン押下
 	 * 
@@ -144,4 +149,7 @@ public class AttendanceController {
 		return "attendance/detail";
 	}
 
+	SimpleDateFormat dateDate = new SimpleDateFormat("MM月 DD日");
+	Date nowDate = new Date();
+	String formatDate = dateDate.format(nowDate);
 }
