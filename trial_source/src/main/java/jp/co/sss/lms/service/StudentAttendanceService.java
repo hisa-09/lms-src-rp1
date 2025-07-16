@@ -44,6 +44,10 @@ public class StudentAttendanceService {
 	@Autowired
 	private TStudentAttendanceMapper tStudentAttendanceMapper;
 
+	
+	
+	
+	
 	/**
 	 * 勤怠一覧情報取得
 	 * 
@@ -334,4 +338,24 @@ public class StudentAttendanceService {
 		return messageUtil.getMessage(Constants.PROP_KEY_ATTENDANCE_UPDATE_NOTICE);
 	}
 
-}
+	//未入力チェック
+	
+//		
+	
+	/**
+	 * 
+	 * @return 未入力件数
+	 */
+	
+	//リターンでMapperからnotEnterCountを呼び出して件数を取得したい
+	//ここで未入力の勤怠件数を取得
+	public int NotEnteredAttendanceCount() {
+		return tStudentAttendanceMapper.notEnterCount(
+				loginUserDto.getLmsUserId(),
+				Constants.DB_FLG_FALSE,new Date());
+	}
+	
+	}
+	
+	
+
