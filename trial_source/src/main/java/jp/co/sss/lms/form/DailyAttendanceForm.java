@@ -47,4 +47,15 @@ public class DailyAttendanceForm {
 	/** インデックス */
 	private String index;
 
+	/** task26　時間と分を分ける  */
+	/** 出勤の時間 */
+	private Integer trainingStartTimeHour;
+	/** 出勤の分  */
+	private Integer trainingStartTimeMinute;
+	/** 退勤の時間  */
+	private Integer trainingEndTimeHour;
+	/** 退勤の分  */
+	private Integer traniningEndTimeMinute;
+	
+	
 }
