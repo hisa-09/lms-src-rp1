@@ -349,13 +349,13 @@ public class StudentAttendanceService {
 	
 	//リターンでMapperからnotEnterCountを呼び出して件数を取得したい
 	//ここで未入力の勤怠件数を取得
-	public int NotEnteredAttendanceCount() {
+	public int notEnteredAttendanceCount() {
 		return tStudentAttendanceMapper.notEnterCount(
 				loginUserDto.getLmsUserId(),
 				Constants.DB_FLG_FALSE,new Date());
 	}
 	
-	}
+}
 	
 	
 

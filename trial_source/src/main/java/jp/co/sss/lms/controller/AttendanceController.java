@@ -48,13 +48,12 @@ public class AttendanceController {
 		model.addAttribute("attendanceManagementDtoList", attendanceManagementDtoList);
 
 		//未取得日付task25　件数を取得したい
-		int notEnteredCount = studentAttendanceService.NotEnteredAttendanceCount();
+		int notEnteredCount = studentAttendanceService.notEnteredAttendanceCount();
 		
 		//未入力の判断を行っている　件数が一件以上を判別
-		boolean meseg = notEnteredCount > 0;
+		boolean isEmpty = notEnteredCount > 0;
 		
-		
-		model.addAttribute("meseg", meseg);
+		model.addAttribute("isEmpty", isEmpty);
 		
 		return "attendance/detail";
 	}
