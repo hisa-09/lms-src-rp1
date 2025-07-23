@@ -338,12 +338,8 @@ public class StudentAttendanceService {
 		return messageUtil.getMessage(Constants.PROP_KEY_ATTENDANCE_UPDATE_NOTICE);
 	}
 
-	//未入力チェック
-	
-//		
-	
 	/**
-	 * 
+	 * 未入力チェック
 	 * @return 未入力件数
 	 */
 	
